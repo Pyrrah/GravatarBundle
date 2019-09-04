@@ -1,0 +1,47 @@
+{
+    "name": "pyrrah/gravatar-bundle",
+    "description": "This bundles provides a Gravatar API various utilities to work with it in templates",
+    "keywords": ["pyrrah", "symfony4", "symfony3", "symfony2", "gravatar", "templating", "twig"],
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [{
+        "name" : "Thibault Duplessis",
+        "email" : "thibault.duplessis@gmail.com"
+    },
+    {
+        "name" : "Henrik Bjørnskov",
+        "email" : "henrik@bjrnskov.dk"
+    }
+    {
+        "name": "Pierre-Yves Dick",
+        "email": "hello@pierreyvesdick.fr",
+        "homepage": "http://www.pierreyvesdick.fr"
+    }],
+    "require": {
+        "php": ">=5.3.0",
+        "symfony/framework-bundle" : "~4.0|~3.0|~2.3",
+        "symfony/templating": "~4.0|~3.0|~2.0"
+    },
+    "require-dev": {
+        "twig/extensions": "1.0.*",
+        "symfony/phpunit-bridge": "~2.7"
+    },
+    "suggest" : {
+        "twig/twig" : "For gravatar twig extension usage"
+    },
+    "conflict": {
+        "twig/twig": "<1.12"
+    },
+    "autoload": {
+        "psr-0": {
+            "Pyrrah\\GravatarBundle\\": ""
+        }
+    },
+    "target-dir" : "Pyrrah/GravatarBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.1-dev"
+        }
+    }
+}
+
