@@ -12,7 +12,7 @@ Installation Symfony 2/3
 
   ```json
   "require": { 
-      "pyrrah/GravatarBundle" : "~1.0"
+      "pyrrah/GravatarBundle" : "dev-master"
   }
   ```
 
