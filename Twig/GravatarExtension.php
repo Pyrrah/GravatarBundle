@@ -2,6 +2,8 @@
 
 namespace Pyrrah\GravatarBundle\Twig;
 
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFunction;
 use Pyrrah\GravatarBundle\Templating\Helper\GravatarHelperInterface;
 
 /**
@@ -9,7 +11,7 @@ use Pyrrah\GravatarBundle\Templating\Helper\GravatarHelperInterface;
  * @author Henrik Bjornskov   <hb@peytz.dk>
  * @author Pierre-Yves Dick <hello@pierreyvesdick.fr>
  */
-class GravatarExtension extends \Twig_Extension implements GravatarHelperInterface
+class GravatarExtension extends AbstractExtension implements GravatarHelperInterface
 {
     /**
      * @var GravatarHelperInterface
@@ -27,11 +29,11 @@ class GravatarExtension extends \Twig_Extension implements GravatarHelperInterfa
     public function getFunctions()
     {
         return array(
-            new \Twig_SimpleFunction('gravatar', array($this, 'getUrl')),
-            new \Twig_SimpleFunction('gravatar_hash', array($this, 'getUrlForHash')),
-            new \Twig_SimpleFunction('gravatar_profile', array($this, 'getProfileUrl')),
-            new \Twig_SimpleFunction('gravatar_profile_hash', array($this, 'getProfileUrlForHash')),
-            new \Twig_SimpleFunction('gravatar_exists', array($this, 'exists')),
+            new TwigFunction('gravatar', array($this, 'getUrl')),
+            new TwigFunction('gravatar_hash', array($this, 'getUrlForHash')),
+            new TwigFunction('gravatar_profile', array($this, 'getProfileUrl')),
+            new TwigFunction('gravatar_profile_hash', array($this, 'getProfileUrlForHash')),
+            new TwigFunction('gravatar_exists', array($this, 'exists')),
         );
     }
 
