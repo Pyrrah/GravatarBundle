@@ -40,9 +40,7 @@
     },
     "target-dir" : "Pyrrah/GravatarBundle",
     "extra": {
-        "branch-alias": {
-            //"dev-master": ""
-        }
+        "branch-alias": {}
     }
 }
 
