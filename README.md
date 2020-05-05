@@ -1,9 +1,9 @@
-PyrrahGravatarBundle
+Pyrrah/GravatarBundle
 =====================
 
-This bundle is based on [`OrnicarGravatarBundle`](https://github.com/henrikbjorn/GravatarBundle) for Symfony 2, today deprecated for Symfony 4.
+Source based on [`OrnicarGravatarBundle`](https://github.com/henrikbjorn/GravatarBundle), today deprecated.
 
-New version is compatible with Symfony 2/3/4.
+This new version is compatible with Symfony 2 to 5.
 
 Installation Symfony 2/3
 ------------------------
@@ -53,8 +53,8 @@ Installation Symfony 2/3
     default: mm
   ```
 
-Installation Symfony 4
-----------------------
+Installation Symfony 4/5
+------------------------
 
   1. Add this bundle to your projects composer.json
 
