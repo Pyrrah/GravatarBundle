@@ -34,7 +34,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Pyrrah\\GravatarBundle\\": ""
+            "Pyrrah\\GravatarBundle\\": "2.0.0"
         }
     }
 }
