@@ -3,7 +3,7 @@ Pyrrah/GravatarBundle
 
 Source based on [`OrnicarGravatarBundle`](https://github.com/henrikbjorn/GravatarBundle), today deprecated.
 
-This new version is compatible with Symfony 3 to 5.
+This new version is compatible with Symfony 2 to 5.
 
 Installation Symfony 2/3
 ------------------------
