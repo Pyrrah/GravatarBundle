@@ -3,16 +3,16 @@ Pyrrah/GravatarBundle
 
 Source based on [`OrnicarGravatarBundle`](https://github.com/henrikbjorn/GravatarBundle), today deprecated.
 
-This new version is compatible with Symfony 2 to 5.
+This new version is compatible with Symfony 3 to 5.
 
-Installation Symfony 2/3
-------------------------
+Installation Symfony 3
+----------------------
 
   1. Add this bundle to your projects composer.json
 
   ```json
   "require": { 
-      "pyrrah/GravatarBundle" : "1.0.0^"
+      "pyrrah/GravatarBundle" : "1.1.0^"
   }
   ```
 
@@ -43,7 +43,7 @@ Installation Symfony 2/3
   pyrrah_gravatar: ~
   ```
 
-  5. If you always have some default for your gravatars such as size, rating or default it can be configured in your config
+  5. If you always have some default for your gravatars such as size, rating or default it can be configured in your config:
 
   ```yaml
   # application/config/config.yml
@@ -71,6 +71,16 @@ Installation Symfony 4/5
       size: 150
       default: mm
       secure: true
+  ```
+
+  3. Add the bundle in the file config/bundles.php (no Symfony Flex... for the moment) :
+
+  ```php
+  <?php
+  
+  return [
+        Pyrrah\GravatarBundle\PyrrahGravatarBundle::class => ['all' => true],
+  ];
   ```
 
 Usage
