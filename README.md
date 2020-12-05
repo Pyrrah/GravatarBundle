@@ -1,9 +1,41 @@
-Pyrrah/GravatarBundle
-=====================
+Pyrrah/GravatarBundle 🤳
+========================
 
-Source based on [`OrnicarGravatarBundle`](https://github.com/henrikbjorn/GravatarBundle), today deprecated.
+[![Latest Version on Packagist][ico-version]][link-packagist]
+[![Software License][ico-license]](LICENSE)
+[![Total Downloads][ico-downloads]][link-downloads]
 
-This new version is compatible with Symfony 3 to 5.
+Source based on [`OrnicarGravatarBundle`](https://github.com/henrikbjorn/GravatarBundle), today deprecated. This new version is compatible with Symfony 3 to 5.
+
+Installation Symfony 4/5
+------------------------
+
+  1. Add this bundle to your projects composer.json
+
+  ```
+  composer require pyrrah/gravatar-bundle
+  ```
+
+  2. If you always have some default for your gravatars such as size, rating or default it can be configured in your config :
+
+  ```yaml
+  # config/packages/pyrrah_gravatar.yaml
+    pyrrah_gravatar:
+      rating: g
+      size: 150
+      default: mm
+      secure: true
+  ```
+
+  3. Add the bundle in the file config/bundles.php (no Symfony Flex... for the moment) :
+
+  ```php
+  <?php
+  
+  return [
+        Pyrrah\GravatarBundle\PyrrahGravatarBundle::class => ['all' => true],
+  ];
+  ```
 
 Installation Symfony 3
 ----------------------
@@ -12,7 +44,7 @@ Installation Symfony 3
 
   ```json
   "require": { 
-      "pyrrah/GravatarBundle" : "1.1.0^"
+      "pyrrah/GravatarBundle" : "1.1.1^"
   }
   ```
 
@@ -53,36 +85,6 @@ Installation Symfony 3
     default: mm
   ```
 
-Installation Symfony 4/5
-------------------------
-
-  1. Add this bundle to your projects composer.json
-
-  ```
-  composer require pyrrah/gravatar-bundle
-  ```
-
-  2. If you always have some default for your gravatars such as size, rating or default it can be configured in your config :
-
-  ```yaml
-  # config/packages/pyrrah_gravatar.yaml
-    pyrrah_gravatar:
-      rating: g
-      size: 150
-      default: mm
-      secure: true
-  ```
-
-  3. Add the bundle in the file config/bundles.php (no Symfony Flex... for the moment) :
-
-  ```php
-  <?php
-  
-  return [
-        Pyrrah\GravatarBundle\PyrrahGravatarBundle::class => ['all' => true],
-  ];
-  ```
-
 Usage
 -----
 
@@ -120,6 +122,25 @@ Or with parameters:
 <img src="{{ gravatar('alias@domain.tld', size, rating, default, secure) }}" />
 ```
 
-For more information [look at the gravatar implementation pages][gravatar].
+For more information [look at the gravatar implementation pages][link-gravatar].
 
-[gravatar]: http://en.gravatar.com/site/implement/
+Credits
+-------
+
+- [Pierre-Yves Dick][link-author]
+- [All Contributors][link-contributors]
+
+License
+-------
+
+The MIT License (MIT). Please see [License File](LICENSE) for more information.
+
+[ico-version]: https://img.shields.io/packagist/v/pyrrah/gravatar-bundle.svg?style=flat-square
+[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/pyrrah/gravatar-bundle.svg?style=flat-square
+
+[link-packagist]: https://packagist.org/packages/pyrrah/gravatar-bundle
+[link-downloads]: https://packagist.org/packages/pyrrah/gravatar-bundle
+[link-author]: https://github.com/Pyrrah
+[link-contributors]: ../../contributors
+[link-gravatar]: http://en.gravatar.com/site/implement/
