@@ -141,6 +141,6 @@ The MIT License (MIT). Please see [License File](LICENSE) for more information.
 
 [link-packagist]: https://packagist.org/packages/pyrrah/gravatar-bundle
 [link-downloads]: https://packagist.org/packages/pyrrah/gravatar-bundle
-[link-author]: https://github.com/pyrrah
+[link-author]: https://github.com/Pyrrah
 [link-contributors]: ../../contributors
 [link-gravatar]: http://en.gravatar.com/site/implement/
