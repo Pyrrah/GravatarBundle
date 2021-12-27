@@ -26,6 +26,9 @@ class GravatarExtension extends AbstractExtension implements GravatarHelperInter
         $this->baseHelper = $helper;
     }
 
+    /**
+     * @return TwigFunction[]
+     */
     public function getFunctions()
     {
         return array(
