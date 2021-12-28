@@ -5,6 +5,7 @@ php:
   - 7.0
   - 7.1
   - 7.3
+  - 8.0
   - nightly
 
 sudo: false
@@ -30,6 +31,10 @@ matrix:
       env: SYMFONY_VERSION="4.0.*"
     - php: 7.3
       env: SYMFONY_VERSION="4.2.*"
+    - php: 8.0
+      env: SYMFONY_VERSION="5.4.*"
+    - php: 8.0
+      env: SYMFONY_VERSION="6.0.*"
   allow_failures:
     - php: nightly
 
