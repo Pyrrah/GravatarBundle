@@ -3,14 +3,15 @@ Pyrrah/GravatarBundle 🤳
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE)
+[![Total Contributors][ico-contributors]][link-contributors]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-Source based on [`OrnicarGravatarBundle`](https://github.com/henrikbjorn/GravatarBundle), today deprecated. This new version is compatible with Symfony 3 to 5.
+Source based on [`OrnicarGravatarBundle`](https://github.com/henrikbjorn/GravatarBundle), today deprecated. This new version is compatible with Symfony 3.4 to 6.
 
-Installation Symfony 4/5
-------------------------
+Installation
+------------
 
-  1. Add this bundle to your projects composer.json
+  1. To install this bundle, run the following [Composer][https://getcomposer.org/] command :
 
   ```
   composer require pyrrah/gravatar-bundle
@@ -20,69 +21,11 @@ Installation Symfony 4/5
 
   ```yaml
   # config/packages/pyrrah_gravatar.yaml
-    pyrrah_gravatar:
-      rating: g
-      size: 150
-      default: mm
-      secure: true
-  ```
-
-  3. Add the bundle in the file config/bundles.php (no Symfony Flex... for the moment) :
-
-  ```php
-  <?php
-  
-  return [
-        Pyrrah\GravatarBundle\PyrrahGravatarBundle::class => ['all' => true],
-  ];
-  ```
-
-Installation Symfony 3
-----------------------
-
-  1. Add this bundle to your projects composer.json
-
-  ```json
-  "require": { 
-      "pyrrah/GravatarBundle" : "1.1.1^"
-  }
-  ```
-
-  2. Run composer update to install the bundle and regenerate the autoloader
-  
-  ```bash
-  $ composer update pyrrah/GravatarBundle
-  ```
-
-  3. Add this bundle to your application's kernel:
-
-  ```php
-  // application/ApplicationKernel.php
-  public function registerBundles()
-  {
-      return array(
-          // ...
-          new Pyrrah\GravatarBundle\PyrrahGravatarBundle(),
-          // ...
-      );
-  }
-  ```
-
-  4. Configure the `gravatar` service, templating helper and Twig extension in your config:
-
-  ```yaml
-  # application/config/config.yml
-  pyrrah_gravatar: ~
-  ```
-
-  5. If you always have some default for your gravatars such as size, rating or default it can be configured in your config:
-
-  ```yaml
-  # application/config/config.yml
   pyrrah_gravatar:
     rating: g
-    size: 80
+    size: 150
     default: mm
+    secure: true
   ```
 
 Usage
@@ -137,6 +80,7 @@ The MIT License (MIT). Please see [License File](LICENSE) for more information.
 
 [ico-version]: https://img.shields.io/packagist/v/pyrrah/gravatar-bundle.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
+[ico-contributors]: https://img.shields.io/github/contributors/Pyrrah/GravatarBundle?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/pyrrah/gravatar-bundle.svg?style=flat-square
 
 [link-packagist]: https://packagist.org/packages/pyrrah/gravatar-bundle
