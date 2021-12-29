@@ -1,8 +1,8 @@
 {
     "name": "pyrrah/gravatar-bundle",
-    "description": "The simple way to use Gravatar API for Symfony 5.",
+    "description": "The simple way to use Gravatar API for Symfony 3.4 to 6.",
     "homepage": "https://github.com/Pyrrah/GravatarBundle",
-    "keywords": ["pyrrah", "gravatar", "picture gravatar", "gravatar symfony3", "gravatar symfony4", "gravatar symfony5"],
+    "keywords": ["pyrrah", "gravatar", "picture gravatar", "gravatar symfony3", "gravatar symfony4", "gravatar symfony5", "gravatar symfony6"],
     "type": "symfony-bundle",
     "license": "MIT",
     "authors": [{
@@ -15,7 +15,8 @@
     },
     {
         "name": "Pierre-Yves Dick",
-        "email": "hello@pierreyvesdick.fr"
+        "email": "hello@pierreyvesdick.fr",
+        "homepage": "https://github.com/Pyrrah"
     }],
     "minimum-stability": "dev",
     "require": {
@@ -39,9 +40,14 @@
     "autoload-dev": {
         "psr-4": { "Pyrrah\\GravatarBundle\\Tests\\": "tests/" }
     },
+    "config": {
+        "preferred-install": {
+            "*": "dist"
+        }
+    },
     "extra": {
         "branch-alias": {
-            "dev-main": "1.x-dev"
+            "dev-main": "v1.2.x-dev"
         }
     }
 }
