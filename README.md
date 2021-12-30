@@ -11,7 +11,7 @@ Source based on [`OrnicarGravatarBundle`](https://github.com/henrikbjorn/Gravata
 Installation
 ------------
 
-  1. To install this bundle, run the following [Composer][https://getcomposer.org/] command :
+  1. To install this bundle, run the following [Composer](https://getcomposer.org/) command :
 
   ```
   composer require pyrrah/gravatar-bundle
