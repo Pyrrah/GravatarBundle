@@ -6,7 +6,13 @@ Pyrrah/GravatarBundle 🤳
 [![Total Contributors][ico-contributors]][link-contributors]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-Source based on [`OrnicarGravatarBundle`](https://github.com/henrikbjorn/GravatarBundle), today deprecated. This new version is compatible with Symfony 3.4 to 6.
+This bundle allows you to display your avatar anywhere on your site, via the Gravatar service.
+
+Requirements
+------------
+
+* Symfony 3.4 to 6
+* A [Gravatar account](https://fr.gravatar.com/site/signup) - it's free!
 
 Installation
 ------------
