@@ -12,7 +12,7 @@ Requirements
 ------------
 
 * Symfony 3.4 to 6
-* A [Gravatar account](https://fr.gravatar.com/site/signup) - it's free!
+* A [Gravatar account](https://www.gravatar.com/site/signup) - it's free!
 
 Installation
 ------------
