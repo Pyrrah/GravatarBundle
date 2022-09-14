@@ -30,7 +30,7 @@ Installation
   pyrrah_gravatar:
     rating: g
     size: 150
-    default: mm
+    default: identicon
     secure: true
   ```
 
