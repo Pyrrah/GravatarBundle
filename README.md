@@ -71,7 +71,7 @@ Or with parameters:
 <img src="{{ gravatar('alias@domain.tld', size, rating, default, secure) }}" />
 ```
 
-For more information [look at the gravatar implementation pages][link-gravatar].
+For more information [look at the gravatar implementation pages][link-gravatar-implement].
 
 Credits
 -------
