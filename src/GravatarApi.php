@@ -43,7 +43,7 @@ class GravatarApi
      * @param string $default
      * @param bool   $secure
      */
-    public function __construct($size = null, $rating = null, $default = null, $secure = null)
+    public function __construct($size = null, $rating = null, $default = null, $secure = true)
     {
         $this->sizeGravatar = $size;
         $this->ratingGravatar = $rating;
