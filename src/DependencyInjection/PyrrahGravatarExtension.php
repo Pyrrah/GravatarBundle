@@ -21,8 +21,6 @@ final class PyrrahGravatarExtension extends Extension
 
         $config = $this->processConfiguration($configuration, $configs);
 
-        $container->setParameter('gravatar.api', $config);
-
         $definition = $container->getDefinition('gravatar.api');
         $definition->replaceArgument(0, $config['size']);
         $definition->replaceArgument(1, $config['rating']);
