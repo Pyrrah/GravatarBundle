@@ -29,9 +29,9 @@ Installation
   ```yaml
   # config/packages/pyrrah_gravatar.yaml
   pyrrah_gravatar:
-    rating: g
-    size: 150
-    default: mp
+    rating: "g"
+    size: 80
+    default: "mp"
   ```
 
 Usage
