@@ -23,10 +23,30 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
-                ->integerNode('size')->defaultValue('80')->info('Size in pixels [ 1 - 2048 ]')->end()
-                ->scalarNode('rating')->defaultValue('g')->info('Maximum rating (inclusive) [ g | pg | r | x ]')->end()
-                ->scalarNode('default')->defaultValue('mp')->info('Default imageset to use [ 404 | mp | identicon | monsterid | wavatar ]')->end()
-                ->booleanNode('secure')->defaultTrue()->info('Return an URL secure for Gravatar ? [ true | false ]')->end()
+                ->integerNode('size')
+                    ->info('Size in pixels')
+                    ->min(1)->max(2048)
+                    ->defaultValue('80')
+                ->end()
+                ->scalarNode('rating')
+                    ->info('Maximum rating (inclusive)')
+                    ->values(['g', 'pg', 'r', 'x'])
+                    ->defaultValue('g')
+                ->end()
+                ->scalarNode('default')
+                    ->info('Default imageset to use')
+                    ->values(['404', 'mp', 'identicon', 'monsterid', 'wavatar'])
+                    ->defaultValue('mp')
+                ->end()
+                ->booleanNode('secure')
+                    ->info('Return an URL secure for Gravatar')
+                    ->defaultTrue()
+                    ->setDeprecated(
+                        'pyrrah/gravatar-bundle',
+                        '1.3',
+                        'The "%node%" option is deprecated. Now, secure gravatar is enabled by default.'
+                    )
+                ->end()
             ->end();
 
         return $treeBuilder;
