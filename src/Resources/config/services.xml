@@ -14,7 +14,6 @@
             <argument /> <!-- will be filled in with size dynamically -->
             <argument /> <!-- will be filled in with rating dynamically -->
             <argument /> <!-- will be filled in with default dynamically -->
-            <argument /> <!-- will be filled in with secure dynamically -->
         </service>
 
         <service id="templating.helper.gravatar" class="%templating.helper.gravatar.class%">
