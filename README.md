@@ -12,7 +12,7 @@ Requirements
 ------------
 
 * Symfony 3.4 to 6
-* A [Gravatar account](https://fr.gravatar.com/site/signup) - it's free!
+* A [Gravatar account][link-gravatar-signup] - it's free!
 
 Installation
 ------------
@@ -30,7 +30,7 @@ Installation
   pyrrah_gravatar:
     rating: g
     size: 150
-    default: mm
+    default: mp
     secure: true
   ```
 
@@ -71,7 +71,7 @@ Or with parameters:
 <img src="{{ gravatar('alias@domain.tld', size, rating, default, secure) }}" />
 ```
 
-For more information [look at the gravatar implementation pages][link-gravatar].
+For more information [look at the gravatar implementation pages][link-gravatar-implement].
 
 Credits
 -------
@@ -93,4 +93,5 @@ The MIT License (MIT). Please see [License File](LICENSE) for more information.
 [link-downloads]: https://packagist.org/packages/pyrrah/gravatar-bundle
 [link-author]: https://github.com/Pyrrah
 [link-contributors]: ../../contributors
-[link-gravatar]: http://en.gravatar.com/site/implement/
+[link-gravatar-signup]: https://www.gravatar.com/site/signup
+[link-gravatar-implement]: https://www.gravatar.com/site/implement/
