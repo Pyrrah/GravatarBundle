@@ -27,7 +27,7 @@ class PyrrahGravatarExtension extends Extension
         }
 
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
-        $loader->load('config.xml');
+        $loader->load('services.xml');
 
         //$container->getDefinition('gravatar.api')->addArgument($config);
     }
