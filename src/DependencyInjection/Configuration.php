@@ -26,7 +26,7 @@ class Configuration implements ConfigurationInterface
                 ->integerNode('size')->defaultValue('80')->info('Size in pixels [ 1 - 2048 ]')->end()
                 ->scalarNode('rating')->defaultValue('g')->info('Maximum rating (inclusive) [ g | pg | r | x ]')->end()
                 ->scalarNode('default')->defaultValue('mp')->info('Default imageset to use [ 404 | mp | identicon | monsterid | wavatar ]')->end()
-                ->booleanNode('secure')->defaultTrue()->end()
+                ->booleanNode('secure')->defaultTrue()->info('Return an URL secure for Gravatar ? [ true | false ]')->end()
             ->end();
 
         return $treeBuilder;
