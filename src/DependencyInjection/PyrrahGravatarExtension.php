@@ -7,6 +7,11 @@ use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
+/**
+ * @author Pierre-Yves Dick
+ *
+ * @internal
+ */
 class PyrrahGravatarExtension extends Extension
 {
     /**
@@ -17,11 +22,13 @@ class PyrrahGravatarExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
-        $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
-        $loader->load('config.xml');
-
         foreach ($config as $name => $value) {
             $container->setParameter(sprintf('pyrrah_gravatar.%s', $name), $value);
         }
+
+        $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
+        $loader->load('config.xml');
+
+        //$container->getDefinition('gravatar.api')->addArgument($config);
     }
 }
