@@ -17,16 +17,17 @@ class Configuration implements ConfigurationInterface
         if (method_exists($treeBuilder, 'getRootNode')) {
             $rootNode = $treeBuilder->getRootNode();
         } else {
+            // BC for symfony/config < 4.2
             $rootNode = $treeBuilder->root('pyrrah_gravatar');
         }
 
         $rootNode
-                ->children()
-                    ->scalarNode('size')->defaultValue('80')->end()
-                    ->scalarNode('rating')->defaultValue('g')->end()
-                    ->scalarNode('default')->defaultValue('mp')->end()
-                    ->booleanNode('secure')->defaultFalse()->end()
-                ->end();
+            ->children()
+                ->scalarNode('size')->defaultValue('80')->end()
+                ->scalarNode('rating')->defaultValue('g')->end()
+                ->scalarNode('default')->defaultValue('mp')->end()
+                ->booleanNode('secure')->defaultFalse()->end()
+            ->end();
 
         return $treeBuilder;
     }
