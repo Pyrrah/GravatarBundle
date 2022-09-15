@@ -15,13 +15,6 @@ namespace Pyrrah\GravatarBundle;
  */
 class GravatarApi
 {
-    /*protected $defaults = array(
-        'size'    => 80,
-        'rating'  => 'g',
-        'default' => null,
-        'secure'  => true,
-    );*/
-
     /**
      * @var int
      */
