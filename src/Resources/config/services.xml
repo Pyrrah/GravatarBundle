@@ -11,9 +11,12 @@
     </parameters>
 
     <services>
-        <service id="Pyrrah\GravatarBundle\GravatarApi" />
-
         <service id="gravatar.api" class="%gravatar.api.class%" />
+            <argument></argument> <!-- will be filled in with size dynamically -->
+            <argument></argument> <!-- will be filled in with rating dynamically -->
+            <argument></argument> <!-- will be filled in with default dynamically -->
+            <argument></argument> <!-- will be filled in with secure dynamically -->
+        </service>
 
         <service id="templating.helper.gravatar" class="%templating.helper.gravatar.class%">
             <tag name="templating.helper" alias="gravatar" />

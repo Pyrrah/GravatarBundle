@@ -17,12 +17,13 @@ final class PyrrahGravatarExtension extends Extension
         $loader = new XmlFileLoader($container, new FileLocator(\dirname(__DIR__).'/Resources/config'));
         $loader->load('services.xml');
 
-        $configuration = $this->getConfiguration($configs, $container);
+        $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
-    }
 
-    public function getAlias()
-    {
-        return 'pyrrah_gravatar';
+        $definition = $container->getDefinition('gravatar.api.class');
+        $definition->replaceArgument(0, $config['size']);
+        $definition->replaceArgument(1, $config['rating']);
+        $definition->replaceArgument(2, $config['default']);
+        $definition->replaceArgument(3, $config['secure']);
     }
 }
