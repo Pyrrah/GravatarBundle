@@ -15,24 +15,47 @@ namespace Pyrrah\GravatarBundle;
  */
 class GravatarApi
 {
-    /**
-     * @var array array of default options that can be overriden with getters and in the construct
-     */
-    protected $defaults = array(
+    /*protected $defaults = array(
         'size'    => 80,
         'rating'  => 'g',
         'default' => null,
         'secure'  => true,
-    );
+    );*/
+
+    /**
+     * @var int
+     */
+    protected $sizeGravatar;
+
+    /**
+     * @var string
+     */
+    protected $ratingGravatar;
+
+    /**
+     * @var string
+     */
+    protected $defaultGravatar;
+
+    /**
+     * @var bool
+     */
+    protected $secureGravatar;
 
     /**
      * Constructor.
      *
-     * @param array $options the array is merged with the defaults
+     * @param int    $size
+     * @param string $rating
+     * @param string $default
+     * @param bool   $secure
      */
-    public function __construct(array $options = array())
+    public function __construct($size = null, $rating = null, $default = null, $secure = true)
     {
-        $this->defaults = array_merge($this->defaults, $options);
+        $this->sizeGravatar = $size;
+        $this->ratingGravatar = $rating;
+        $this->defaultGravatar = $default;
+        $this->secureGravatar = $secure;
     }
 
     /**
@@ -67,9 +90,9 @@ class GravatarApi
     public function getUrlForHash($hash, $size = null, $rating = null, $default = null, $secure = true)
     {
         $map = array(
-            's' => $size ?: $this->defaults['size'],
-            'r' => $rating ?: $this->defaults['rating'],
-            'd' => $default ?: $this->defaults['default'],
+            's' => $size ?: $this->sizeGravatar,
+            'r' => $rating ?: $this->ratingGravatar,
+            'd' => $default ?: $this->defaultGravatar,
         );
 
         $secure = isset($secure) ? $secure : $this->defaults['secure'];
@@ -102,7 +125,7 @@ class GravatarApi
      */
     public function getProfileUrlForHash($hash, $secure = true)
     {
-        $secure = $secure ?: $this->defaults['secure'];
+        $secure = $secure ?: $this->secureGravatar;
 
         return ($secure ? 'https://secure' : 'http://www').'.gravatar.com/'.$hash;
     }
