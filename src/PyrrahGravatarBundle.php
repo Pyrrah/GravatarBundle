@@ -2,8 +2,8 @@
 
 namespace Pyrrah\GravatarBundle;
 
-use Symfony\Component\HttpKernel\Bundle\Bundle as BaseBundle;
+use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class PyrrahGravatarBundle extends BaseBundle
+class PyrrahGravatarBundle extends Bundle
 {
 }

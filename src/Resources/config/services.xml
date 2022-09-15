@@ -1,5 +1,4 @@
 <?xml version="1.0" ?>
-
 <container xmlns="http://symfony.com/schema/dic/services"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
@@ -11,7 +10,11 @@
     </parameters>
 
     <services>
-        <service id="gravatar.api" class="%gravatar.api.class%" />
+        <service id="gravatar.api" class="%gravatar.api.class%">
+            <argument /> <!-- will be filled in with size dynamically -->
+            <argument /> <!-- will be filled in with rating dynamically -->
+            <argument /> <!-- will be filled in with default dynamically -->
+        </service>
 
         <service id="templating.helper.gravatar" class="%templating.helper.gravatar.class%">
             <tag name="templating.helper" alias="gravatar" />
