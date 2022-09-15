@@ -2,9 +2,10 @@
 
 namespace Pyrrah\GravatarBundle;
 
-use Symfony\Component\HttpKernel\Bundle\Bundle as BaseBundle;
+use Pyrrah\GravatarBundle\DependencyInjection\PyrrahGravatarExtension;
+use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class PyrrahGravatarBundle extends BaseBundle
+class PyrrahGravatarBundle extends Bundle
 {
     /**
      * Overridden to allow for the custom extension alias.
