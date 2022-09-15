@@ -32,7 +32,6 @@ Installation
     rating: g
     size: 150
     default: mp
-    secure: true
   ```
 
 Usage
@@ -47,7 +46,7 @@ All you have to do is use the helper like this example:
 Or with parameters:
 
 ```html
-<img src="<?php echo $view['gravatar']->getUrl('alias@domain.tld', '80', 'g', 'defaultimage.png', true) ?>" />
+<img src="<?php echo $view['gravatar']->getUrl('alias@domain.tld', '80', 'g', 'defaultimage.png') ?>" />
 ```
 
 The only required parameter is the email adress. The rest have default values.
@@ -69,7 +68,7 @@ Or if you want to check if a gravatar email exists:
 Or with parameters:
 
 ```
-<img src="{{ gravatar('alias@domain.tld', size, rating, default, secure) }}" />
+<img src="{{ gravatar('alias@domain.tld', size, rating, default) }}" />
 ```
 
 For more information [look at the gravatar implementation pages][link-gravatar-implement].
