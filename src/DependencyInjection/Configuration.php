@@ -23,29 +23,28 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
+                // Size in pixels
                 ->integerNode('size')
-                    ->info('Size in pixels')
                     ->min(1)->max(2048)
                     ->defaultValue('80')
                 ->end()
+
+                // Maximum rating (inclusive)
                 ->enumNode('rating')
-                    ->info('Maximum rating (inclusive)')
                     ->values(['g', 'pg', 'r', 'x'])
                     ->defaultValue('g')
                 ->end()
+
+                // Default imageset to use (mm deprecated, kept for oldest versions)
                 ->enumNode('default')
-                    ->info('Default imageset to use')
-                    ->values(['404', 'mp', 'identicon', 'monsterid', 'wavatar'])
+                    ->values(['404', 'mp', 'identicon', 'monsterid', 'wavatar', 'mm'])
                     ->defaultValue('mp')
                 ->end()
+
+                // [Deprecated] Return an URL secure for Gravatar
                 ->booleanNode('secure')
-                    ->info('Return an URL secure for Gravatar')
                     ->defaultTrue()
-                    ->setDeprecated(
-                        'pyrrah/gravatar-bundle',
-                        '1.3',
-                        'The "%node%" option is deprecated. Now, secure gravatar is enabled by default.'
-                    )
+                    ->setDeprecated('pyrrah/gravatar-bundle','1.3')
                 ->end()
             ->end();
 
