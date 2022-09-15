@@ -88,7 +88,7 @@ class GravatarApi
             'd' => $default ?: $this->defaultGravatar,
         );
 
-        $secure = isset($secure) ? $secure : $this->defaults['secure'];
+        $secure = isset($secure) ? $secure : $this->secureGravatar;
 
         return ($secure ? 'https://secure' : 'http://www').'.gravatar.com/avatar/'.$hash.'?'.http_build_query(array_filter($map));
     }
