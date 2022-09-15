@@ -11,6 +11,8 @@
     </parameters>
 
     <services>
+        <service id="Pyrrah\GravatarBundle\GravatarApi" />
+
         <service id="gravatar.api" class="%gravatar.api.class%" />
 
         <service id="templating.helper.gravatar" class="%templating.helper.gravatar.class%">
