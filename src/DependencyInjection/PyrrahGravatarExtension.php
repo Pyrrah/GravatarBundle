@@ -20,4 +20,9 @@ final class PyrrahGravatarExtension extends Extension
         $configuration = $this->getConfiguration($configs, $container);
         $config = $this->processConfiguration($configuration, $configs);
     }
+
+    public function getAlias()
+    {
+        return 'pyrrah_gravatar';
+    }
 }
