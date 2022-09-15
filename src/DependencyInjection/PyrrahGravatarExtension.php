@@ -2,8 +2,8 @@
 
 namespace Pyrrah\GravatarBundle\DependencyInjection;
 
-use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
@@ -23,12 +23,5 @@ class PyrrahGravatarExtension extends Extension
         foreach ($config as $name => $value) {
             $container->setParameter(sprintf('pyrrah_gravatar.%s', $name), $value);
         }
-
-        //$container->getDefinition('gravatar.api')->addArgument($config);
-    }
-
-    public function getAlias()
-    {
-        return 'pyrrah_gravatar';
     }
 }
