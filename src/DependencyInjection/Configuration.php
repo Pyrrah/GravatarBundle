@@ -24,7 +24,7 @@ class Configuration implements ConfigurationInterface
                 ->children()
                     ->scalarNode('size')->defaultValue('80')->end()
                     ->scalarNode('rating')->defaultValue('g')->end()
-                    ->scalarNode('default')->defaultValue('identicon')->end()
+                    ->scalarNode('default')->defaultValue('mp')->end()
                     ->booleanNode('secure')->defaultFalse()->end()
                 ->end();
 
