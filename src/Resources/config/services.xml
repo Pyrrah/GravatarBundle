@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" ?>
 <container xmlns="http://symfony.com/schema/dic/services"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://symfony.com/schema/dic/services
-        https://symfony.com/schema/dic/services/services-1.0.xsd">
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <parameters>
         <parameter key="templating.helper.gravatar.class">Pyrrah\GravatarBundle\Templating\Helper\GravatarHelper</parameter>
@@ -12,10 +11,10 @@
 
     <services>
         <service id="gravatar.api" class="%gravatar.api.class%" />
-            <argument></argument> <!-- will be filled in with size dynamically -->
-            <argument></argument> <!-- will be filled in with rating dynamically -->
-            <argument></argument> <!-- will be filled in with default dynamically -->
-            <argument></argument> <!-- will be filled in with secure dynamically -->
+            <argument /> <!-- will be filled in with size dynamically -->
+            <argument /> <!-- will be filled in with rating dynamically -->
+            <argument /> <!-- will be filled in with default dynamically -->
+            <argument /> <!-- will be filled in with secure dynamically -->
         </service>
 
         <service id="templating.helper.gravatar" class="%templating.helper.gravatar.class%">
