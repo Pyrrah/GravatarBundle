@@ -4,7 +4,6 @@ namespace Pyrrah\GravatarBundle\Templating\Helper;
 
 use Pyrrah\GravatarBundle\GravatarApi;
 use Symfony\Component\Routing\RouterInterface;
-use Symfony\Component\Templating\Helper\Helper;
 
 /**
  * Symfony 2 Helper for Gravatar. Uses Bundle\GravatarBundle\GravatarApi.
@@ -13,7 +12,7 @@ use Symfony\Component\Templating\Helper\Helper;
  * @author Henrik Bjornskov <henrik@bearwoods.dk>
  * @author Pierre-Yves Dick <hello@pierreyvesdick.fr>
  */
-class GravatarHelper extends Helper implements GravatarHelperInterface
+class GravatarHelper implements GravatarHelperInterface
 {
     /**
      * @var Pyrrah\GravatarBundle\GravatarApi
