@@ -1,8 +1,8 @@
 {
     "name": "pyrrah/gravatar-bundle",
-    "description": "The simple way to use Gravatar API for Symfony 4.4 to 6.x",
+    "description": "The simple way to use Gravatar API for Symfony 4.4 to 7",
     "homepage": "https://github.com/Pyrrah/GravatarBundle",
-    "keywords": ["pyrrah", "gravatar", "picture gravatar", "gravatar symfony4", "gravatar symfony5", "gravatar symfony6"],
+    "keywords": ["pyrrah", "gravatar", "picture gravatar", "gravatar symfony4", "gravatar symfony5", "gravatar symfony6", "gravatar symfony7"],
     "type": "symfony-bundle",
     "license": "MIT",
     "authors": [{
