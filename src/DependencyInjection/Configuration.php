@@ -34,7 +34,7 @@ class Configuration implements ConfigurationInterface
 
                 // Default imageset to use (mm deprecated, kept for oldest versions)
                 ->enumNode('default')
-                    ->values(['404', 'mp', 'identicon', 'monsterid', 'wavatar', 'mm'])
+                    ->values(['404', 'mp', 'identicon', 'monsterid', 'wavatar', 'retro', 'robohash', 'mm'])
                     ->defaultValue('mp')
                 ->end()
 
