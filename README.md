@@ -11,8 +11,8 @@ This bundle allows you to display your avatar anywhere on your site, via the Gra
 Requirements
 ------------
 
-* Symfony 4.4 to 7
-* PHP 7.1.3 or higher
+* Symfony 6.4 to 7.x
+* PHP 8.1 or higher
 * A [Gravatar account][link-gravatar-signup] - it's free!
 
 Installation
