@@ -32,7 +32,15 @@ Installation
     rating: "g"
     size: 80
     default: "mp"
+    format: "base64"
   ```
+
+> [!NOTE]
+> The format option is specific to the bundle to choose the output format :
+>  * url (default) : returns the https URL of the Gravatar image
+>  * base64 : returns a base64-formatted image generated from the Gravatar URL
+>
+> By using the "base64" option, you hide from your users the email hash used in the Gravatar URL.
 
 Usage
 -----
@@ -46,7 +54,7 @@ All you have to do is use the helper like this example:
 Or with parameters:
 
 ```html
-<img src="<?php echo $view['gravatar']->getUrl('alias@domain.tld', '80', 'g', 'defaultimage.png') ?>" />
+<img src="<?php echo $view['gravatar']->getUrl('alias@domain.tld', '80', 'g', 'defaultimage.png', 'base64') ?>" />
 ```
 
 The only required parameter is the email adress. The rest have default values.

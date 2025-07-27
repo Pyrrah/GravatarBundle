@@ -43,33 +43,33 @@ class GravatarExtension extends AbstractExtension implements GravatarHelperInter
     /**
      * {@inheritdoc}
      */
-    public function getUrl($email, $size = null, $rating = null, $default = null, $secure = true)
+    public function getUrl($email, $size = null, $rating = null, $default = null, $format = null)
     {
-        return $this->baseHelper->getUrl($email, $size, $rating, $default, $secure);
+        return $this->baseHelper->getUrl($email, $size, $rating, $default, $format);
     }
 
     /**
      * {@inheritdoc}
      */
-    public function getUrlForHash($hash, $size = null, $rating = null, $default = null, $secure = true)
+    public function getUrlForHash($hash, $size = null, $rating = null, $default = null, $format = null)
     {
-        return $this->baseHelper->getUrlForHash($hash, $size, $rating, $default, $secure);
+        return $this->baseHelper->getUrlForHash($hash, $size, $rating, $default, $format);
     }
 
     /**
      * {@inheritdoc}
      */
-    public function getProfileUrl($email, $secure = true)
+    public function getProfileUrl($email)
     {
-        return $this->baseHelper->getProfileUrl($email, $secure);
+        return $this->baseHelper->getProfileUrl($email);
     }
 
     /**
      * {@inheritdoc}
      */
-    public function getProfileUrlForHash($hash, $secure = true)
+    public function getProfileUrlForHash($hash)
     {
-        return $this->baseHelper->getProfileUrlForHash($hash, $secure);
+        return $this->baseHelper->getProfileUrlForHash($hash);
     }
 
     /**

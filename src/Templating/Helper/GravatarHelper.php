@@ -39,33 +39,33 @@ class GravatarHelper implements GravatarHelperInterface
     /**
      * {@inheritdoc}
      */
-    public function getUrl($email, $size = null, $rating = null, $default = null, $secure = true)
+    public function getUrl($email, $size = null, $rating = null, $default = null, $format = null)
     {
-        return $this->api->getUrl($email, $size, $rating, $default, $this->isSecure($secure));
+        return $this->api->getUrl($email, $size, $rating, $default, $format);
     }
 
     /**
      * {@inheritdoc}
      */
-    public function getUrlForHash($hash, $size = null, $rating = null, $default = null, $secure = true)
+    public function getUrlForHash($hash, $size = null, $rating = null, $default = null, $format = null)
     {
-        return $this->api->getUrlForHash($hash, $size, $rating, $default, $this->isSecure($secure));
+        return $this->api->getUrlForHash($hash, $size, $rating, $default, $format);
     }
 
     /**
      * {@inheritdoc}
      */
-    public function getProfileUrl($email, $secure = true)
+    public function getProfileUrl($email)
     {
-        return $this->api->getProfileUrl($email, $this->isSecure($secure));
+        return $this->api->getProfileUrl($email);
     }
 
     /**
      * {@inheritdoc}
      */
-    public function getProfileUrlForHash($hash, $secure = true)
+    public function getProfileUrlForHash($hash)
     {
-        return $this->api->getProfileUrlForHash($hash, $this->isSecure($secure));
+        return $this->api->getProfileUrlForHash($hash);
     }
 
     public function render($email, array $options = array())
@@ -73,9 +73,9 @@ class GravatarHelper implements GravatarHelperInterface
         $size = isset($options['size']) ? $options['size'] : null;
         $rating = isset($options['rating']) ? $options['rating'] : null;
         $default = isset($options['default']) ? $options['default'] : null;
-        $secure = $this->isSecure();
+        $format = isset($options['format']) ? $options['format'] : null;
 
-        return $this->api->getUrl($email, $size, $rating, $default, $secure);
+        return $this->api->getUrl($email, $size, $rating, $default, $format);
     }
 
     /**
@@ -94,25 +94,5 @@ class GravatarHelper implements GravatarHelperInterface
     public function getName()
     {
         return 'gravatar';
-    }
-
-    /**
-     * Returns true if avatar should be fetched over secure connection.
-     *
-     * @param mixed $preset
-     *
-     * @return bool
-     */
-    protected function isSecure($preset = true)
-    {
-        if (null !== $preset) {
-            return (bool) $preset;
-        }
-
-        if (null === $this->router) {
-            return false;
-        }
-
-        return 'https' == strtolower($this->router->getContext()->getScheme());
     }
 }

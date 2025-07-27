@@ -25,5 +25,6 @@ final class PyrrahGravatarExtension extends Extension
         $definition->replaceArgument(0, $config['size']);
         $definition->replaceArgument(1, $config['rating']);
         $definition->replaceArgument(2, $config['default']);
+        $definition->replaceArgument(3, $config['format']);
     }
 }
