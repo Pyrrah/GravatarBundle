@@ -32,6 +32,12 @@ class Configuration implements ConfigurationInterface
                     ->defaultValue('mp')
                 ->end()
 
+                // Default format to return to the user (gravatar URL or base64 image)
+                ->enumNode('format')
+                    ->values(['url', 'base64'])
+                    ->defaultValue('url')
+                ->end()
+
                 // [Deprecated] Return an URL secure for Gravatar
                 ->booleanNode('secure')
                     ->defaultTrue()
