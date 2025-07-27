@@ -76,7 +76,7 @@ Or if you want to check if a gravatar email exists:
 Or with parameters:
 
 ```
-<img src="{{ gravatar('alias@domain.tld', size, rating, default) }}" />
+<img src="{{ gravatar('alias@domain.tld', size, rating, default, format) }}" />
 ```
 
 For more information [look at the gravatar implementation pages][link-gravatar-implement].
