@@ -36,9 +36,11 @@ Installation
   ```
 
 > [!NOTE]
-> The "format" option is specific to the bundle to choose the output format :
->  * url (default option): returns the Gravatar image's https URL
->  * base64: image generated in base64 format from the Gravatar URL
+> The format option is specific to the bundle to choose the output format :
+>  * url (default) : returns the https URL of the Gravatar image
+>  * base64 : returns a base64-formatted image generated from the Gravatar URL
+>
+> By using the "base64" option, you hide from your users the email hash used in the Gravatar URL.
 
 Usage
 -----
