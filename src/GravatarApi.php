@@ -108,22 +108,20 @@ class GravatarApi
      * Returns a url for a gravatar profile.
      *
      * @param string $email
-     * @param bool   $secure
      *
      * @return string
      */
-    public function getProfileUrl($email, $secure = true)
+    public function getProfileUrl($email)
     {
         $hash = md5(strtolower(trim($email)));
 
-        return $this->getProfileUrlForHash($hash, $secure);
+        return $this->getProfileUrlForHash($hash);
     }
 
     /**
      * Returns a url for a gravatar profile for the given hash.
      *
      * @param string $hash
-     * @param bool   $secure
      *
      * @return string
      */
