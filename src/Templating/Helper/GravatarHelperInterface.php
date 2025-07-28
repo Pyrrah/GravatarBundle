@@ -34,7 +34,6 @@ interface GravatarHelperInterface
      * Returns a url for a gravatar profile.
      *
      * @param string $email
-     * @param bool   $secure
      *
      * @return string
      */
@@ -44,7 +43,6 @@ interface GravatarHelperInterface
      * Returns a url for a gravatar profile, for the given hash.
      *
      * @param string $hash
-     * @param bool   $secure
      *
      * @return string
      */
