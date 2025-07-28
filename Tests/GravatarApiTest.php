@@ -48,6 +48,8 @@ class GravatarApiTest extends TestCase
         $api = new GravatarApi(array(
             'size'    => 20,
             'default' => 'mm',
+            'rating'  => 'g',
+            'format'  => 'base64',
         ));
 
         $this->assertEquals('https://secure.gravatar.com/avatar/0aa61df8e35327ac3b3bc666525e0bee?s=20&r=g&d=mm', $api->getUrl('henrik@bearwoods.dk'));
