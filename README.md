@@ -32,7 +32,7 @@ Installation
     rating: "g"      # Allowed values: g, pg, r, x
     size: 80         # Image size in pixels
     default: "mp"   # Default image type (e.g. mp, identicon, monsterid, wavatar, retro, robohash, blank, 404)
-    format: "base64" # Output format: url or base64
+    format: "base64" # Output format: url, base64
   ```
 
 > [!NOTE]
