@@ -40,7 +40,7 @@ Installation
 >  * url (default) : returns the https URL of the Gravatar image
 >  * base64 : returns a base64-formatted image generated from the Gravatar URL
 >
-> By using the "base64" option, you hide from your users the email hash used in the Gravatar URL.
+> Tip: Use the "base64" option to hide your email hash used in the Gravatar URL.
 
 Usage
 -----
