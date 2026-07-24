@@ -43,7 +43,7 @@ class GravatarExtension extends AbstractExtension implements GravatarHelperInter
     /**
      * {@inheritdoc}
      */
-    public function getUrl($email, $size = null, $rating = null, $default = null, $format = null)
+    public function getUrl(string $email, ?int $size = null, ?string $rating = null, ?string $default = null, ?bool $format = null): string
     {
         return $this->baseHelper->getUrl($email, $size, $rating, $default, $format);
     }
@@ -51,7 +51,7 @@ class GravatarExtension extends AbstractExtension implements GravatarHelperInter
     /**
      * {@inheritdoc}
      */
-    public function getUrlForHash($hash, $size = null, $rating = null, $default = null, $format = null)
+    public function getUrlForHash(string $hash, ?int $size = null, ?string $rating = null, ?string $default = null, ?bool $format = null): string
     {
         return $this->baseHelper->getUrlForHash($hash, $size, $rating, $default, $format);
     }
@@ -59,7 +59,7 @@ class GravatarExtension extends AbstractExtension implements GravatarHelperInter
     /**
      * {@inheritdoc}
      */
-    public function getProfileUrl($email)
+    public function getProfileUrl(string $email): string
     {
         return $this->baseHelper->getProfileUrl($email);
     }
@@ -67,7 +67,7 @@ class GravatarExtension extends AbstractExtension implements GravatarHelperInter
     /**
      * {@inheritdoc}
      */
-    public function getProfileUrlForHash($hash)
+    public function getProfileUrlForHash(string $hash): string
     {
         return $this->baseHelper->getProfileUrlForHash($hash);
     }
@@ -75,7 +75,7 @@ class GravatarExtension extends AbstractExtension implements GravatarHelperInter
     /**
      * {@inheritdoc}
      */
-    public function exists($email)
+    public function exists(string $email): bool
     {
         return $this->baseHelper->exists($email);
     }

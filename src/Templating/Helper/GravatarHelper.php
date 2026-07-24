@@ -39,7 +39,7 @@ class GravatarHelper implements GravatarHelperInterface
     /**
      * {@inheritdoc}
      */
-    public function getUrl($email, $size = null, $rating = null, $default = null, $format = null)
+    public function getUrl(string $email, ?int $size = null, ?string $rating = null, ?string $default = null, ?bool $format = null): string
     {
         return $this->api->getUrl($email, $size, $rating, $default, $format);
     }
@@ -47,7 +47,7 @@ class GravatarHelper implements GravatarHelperInterface
     /**
      * {@inheritdoc}
      */
-    public function getUrlForHash($hash, $size = null, $rating = null, $default = null, $format = null)
+    public function getUrlForHash(string $hash, ?int $size = null, ?string $rating = null, ?string $default = null, ?bool $format = null): string
     {
         return $this->api->getUrlForHash($hash, $size, $rating, $default, $format);
     }
@@ -55,7 +55,7 @@ class GravatarHelper implements GravatarHelperInterface
     /**
      * {@inheritdoc}
      */
-    public function getProfileUrl($email)
+    public function getProfileUrl(string $email): string
     {
         return $this->api->getProfileUrl($email);
     }
@@ -63,7 +63,7 @@ class GravatarHelper implements GravatarHelperInterface
     /**
      * {@inheritdoc}
      */
-    public function getProfileUrlForHash($hash)
+    public function getProfileUrlForHash(string $hash): string
     {
         return $this->api->getProfileUrlForHash($hash);
     }
@@ -81,7 +81,7 @@ class GravatarHelper implements GravatarHelperInterface
     /**
      * {@inheritdoc}
      */
-    public function exists($email)
+    public function exists(string $email): bool
     {
         return $this->api->exists($email);
     }

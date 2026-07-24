@@ -37,12 +37,6 @@ class Configuration implements ConfigurationInterface
                     ->values(['url', 'base64'])
                     ->defaultValue('url')
                 ->end()
-
-                // [Deprecated] Return an URL secure for Gravatar
-                ->booleanNode('secure')
-                    ->defaultTrue()
-                    ->setDeprecated('pyrrah/gravatar-bundle','1.3')
-                ->end()
             ->end();
 
         return $treeBuilder;

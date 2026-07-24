@@ -11,8 +11,8 @@ This bundle allows you to display your avatar anywhere on your site, via the Gra
 Requirements
 ------------
 
-* Symfony 6.4 to 7.x
-* PHP 8.1 or higher
+* Symfony 7.4 and 8.x
+* PHP 8.4 or higher
 * A [Gravatar account][link-gravatar-signup] - it's free!
 
 Installation
@@ -24,15 +24,15 @@ Installation
   composer require pyrrah/gravatar-bundle
   ```
 
-  2. If you always have some default for your gravatars such as size, rating or default it can be configured in your config :
+  2. If you always have some default for your gravatars such as size, rating, default image, or format, it can be configured in your config:
 
   ```yaml
   # config/packages/pyrrah_gravatar.yaml
   pyrrah_gravatar:
-    rating: "g"
-    size: 80
-    default: "mp"
-    format: "base64"
+    rating: "g"      # Allowed values: g, pg, r, x
+    size: 80         # Image size in pixels
+    default: "mp"   # Default image type (e.g. mp, identicon, monsterid, wavatar, retro, robohash, blank, 404)
+    format: "base64" # Output format: url or base64
   ```
 
 > [!NOTE]
@@ -47,37 +47,29 @@ Usage
 
 All you have to do is use the helper like this example:
 
-```html
-<img src="<?php echo $view['gravatar']->getUrl('alias@domain.tld') ?>" />
-```
-
-Or with parameters:
-
-```html
-<img src="<?php echo $view['gravatar']->getUrl('alias@domain.tld', '80', 'g', 'defaultimage.png', 'base64') ?>" />
-```
-
-The only required parameter is the email adress. The rest have default values.
-
-If you use twig you can use the helper like this example:
-
-```
+```twig
 <img src="{{ gravatar('alias@domain.tld') }}" />
 ```
 
 Or if you want to check if a gravatar email exists:
 
-```
+```twig
 {% if gravatar_exists('alias@domain.tld') %}
   The email is an gravatar email
 {% endif %}
 ```
 
-Or with parameters:
+Or with parameters (including default):
 
 ```
 <img src="{{ gravatar('alias@domain.tld', size, rating, default, format) }}" />
 ```
+
+Where:
+- `size` (int): Image size in pixels
+- `rating` (string): Allowed values: g, pg, r, x
+- `default` (string): Default image type (e.g. mp, identicon, monsterid, wavatar, retro, robohash, blank, 404)
+- `format` (string): Output format: url or base64
 
 For more information [look at the gravatar implementation pages][link-gravatar-implement].
 

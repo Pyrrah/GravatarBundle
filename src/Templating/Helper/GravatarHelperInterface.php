@@ -15,7 +15,7 @@ interface GravatarHelperInterface
      *
      * @return string
      */
-    public function getUrl($email, $size = null, $rating = null, $default = null, $format = null);
+    public function getUrl(string $email, ?int $size = null, ?string $rating = null, ?string $default = null, ?bool $format = null): string;
 
     /**
      * Returns a url for a gravatar for a given hash.
@@ -28,7 +28,7 @@ interface GravatarHelperInterface
      *
      * @return string
      */
-    public function getUrlForHash($hash, $size = null, $rating = null, $default = null, $format = null);
+    public function getUrlForHash(string $hash, ?int $size = null, ?string $rating = null, ?string $default = null, ?bool $format = null): string;
 
     /**
      * Returns a url for a gravatar profile.
@@ -37,7 +37,7 @@ interface GravatarHelperInterface
      *
      * @return string
      */
-    public function getProfileUrl($email);
+    public function getProfileUrl(string $email): string;
 
     /**
      * Returns a url for a gravatar profile, for the given hash.
@@ -46,7 +46,7 @@ interface GravatarHelperInterface
      *
      * @return string
      */
-    public function getProfileUrlForHash($hash);
+    public function getProfileUrlForHash(string $hash): string;
 
     /**
      * Returns true if a avatar could be found for the email.
@@ -55,5 +55,5 @@ interface GravatarHelperInterface
      *
      * @return bool
      */
-    public function exists($email);
+    public function exists(string $email): bool;
 }
