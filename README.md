@@ -66,10 +66,10 @@ Or with parameters (including default):
 ```
 
 Where:
-- `size` (int): Image size in pixels
-- `rating` (string): Allowed values: g, pg, r, x
-- `default` (string): Default image type (e.g. mp, identicon, monsterid, wavatar, retro, robohash, blank, 404)
-- `format` (string): Output format: url or base64
+- `size` (int) : Image size in pixels
+- `rating` (string) : Allowed values: g, pg, r, x
+- `default` (string) : Default image type (e.g. mp, identicon, monsterid, wavatar, retro, robohash, blank, 404)
+- `format` (string) : Output format: url, base64
 
 For more information [look at the gravatar implementation pages][link-gravatar-implement].
 
